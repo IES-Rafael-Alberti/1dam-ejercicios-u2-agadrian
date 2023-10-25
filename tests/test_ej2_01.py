@@ -1,5 +1,5 @@
 import pytest
-from EjerciciosU2.ej2_01 import pedirEdad, mayorEdad
+from src.ej2_01 import pedirEdad, mayorEdad
 
 @pytest.mark.parametrize(
     "input_n, expected",
