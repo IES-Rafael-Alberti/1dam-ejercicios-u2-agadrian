@@ -16,11 +16,23 @@ def pedirNumEntero():
 
 
 
+def comprobarPar(num):
+    '''
+    Comprueba si un numero es par o no
 
+    Retorna - boolean: True or False
+    '''
+    if (num % 2) == 0:
+        return True
+    else: 
+        return False
 
 
 def main():
-    pass
+    if comprobarPar(pedirNumEntero()):
+        print("El numero es par")
+    else:
+        print("El numero es impar")
    
 
 if __name__ == "__main__":
