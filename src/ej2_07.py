@@ -16,7 +16,7 @@ Escribir un programa que pregunte al usuario su renta anual y muestre por pantal
 
 def tipoImpositivo(rentaAnual):
     '''
-    Recibe un parametro tipo float, y calcula el tiepo de impositivo 
+    Recibe un parametro tipo float, y calcula el tipo de impositivo 
     que le corresponde a dicho parametro
 
     Retorna: 
@@ -37,8 +37,11 @@ def tipoImpositivo(rentaAnual):
 
 def main():
     renta = float(input("Introduce tu renta anual: \n"))
-    impositivo = tipoImpositivo(renta)
-    print(f"Para una renta de {renta}€ anuales, el tipo impositivo es del {impositivo}%")
+    if renta < 0:
+        print("ERROR - La renta debe ser un valor positivo.")
+    else:
+        impositivo = tipoImpositivo(renta)
+        print(f"Para una renta de {renta}€ anuales, el tipo impositivo es del {impositivo}%")
 
 
 
