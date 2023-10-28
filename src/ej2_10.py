@@ -10,14 +10,12 @@ Escribir un programa que pregunte al usuario si quiere una pizza vegetariana o n
 
 def eleccionPizza():
     '''
-    Pregunta si quiere piza vegetariana siendo la unica opcion de respuesta "si" o "no"
+    Pregunta si quiere piza vegetariana siendo la unica ingredienteion de respuesta "si" o "no"
 
     Retorna:
             str --> "vegetariana"
                     "no vegetariana"
     '''
-
-    
     while True:
         eleccion = input("Quieres piza vegetariana? (si/no): \n").lower()
         if eleccion not in ["si", "no"]:
@@ -30,47 +28,40 @@ def eleccionPizza():
 
 
 
+def eleccionIngredientes(ingredientes):
+    '''
+    Pide que elija uno de los ingredientes de una lista
 
-def menuPizza(eleccion):
-    ingredientes_veg = ["pimiento","tofu"]
-    ingredientes_no_veg = ["peperoni","jamón","salmón"]
-    if eleccion == "vegetariana":
-        print("Elije un solo ingrediente para añadir:", ", ".join(ingredientes_veg))
-        opc = input()
+    Retorna:
+            str de el ingrediente
+    '''
+    print("Elija un solo ingrendiete de los siguientes:", ", ".join(ingredientes))
+    opcIngrediente = input()
 
-        salir = False
-        while not salir:
-            if opc not in ingredientes_veg:
-                print("ERROR - Debes elejir uno de los ingredientes")
-                opc = input()
-            else:
-                salir = True
-        return opc
-    else:
-        print("Elije un solo ingrediente para añadir: " + ", ".join(ingredientes_no_veg))
-        opc = input()
+    while opcIngrediente not in ingredientes:
+        print("ERROR - Debes elejir uno de los ingredientes")
+        opcIngrediente = input()
 
-        salir = False
-        while not salir:
-            if opc not in ingredientes_no_veg:
-                print("ERROR - Debes elejir uno de los ingredientes")
-                opc = input()
-            else:
-                salir = True
-        return opc
+    return opcIngrediente
+  
         
 
 
 def main():
+    print("Tipo de pizzas y ingredientes: \n\n - Vegetariana: pimiento, tofu. \n - No vegetariana: peperoni, jamón, salmón.\n")
+
+    ingredientes_veg = ["pimiento","tofu"]
+    ingredientes_no_veg = ["peperoni","jamón","salmón"]
+
     tipoPizza = eleccionPizza()
-    ingrediente = menuPizza(tipoPizza)
-    
-    
+    if tipoPizza == "vegetariana":
+        ingrediente = eleccionIngredientes(ingredientes_veg)
+    else:
+        ingrediente = eleccionIngredientes(ingredientes_no_veg)
 
     print("Ha elegido una piza " + tipoPizza + ", con los siguientes ingredientes: tomate, mozzarrella, " + ingrediente + ".")
 
     
-
 
 
 if __name__ == "__main__":
