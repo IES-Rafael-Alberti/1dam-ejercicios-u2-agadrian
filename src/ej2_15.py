@@ -11,27 +11,7 @@ Escribir un programa que pregunte al usuario una cantidad a invertir, el interé
 '''
 
 
-
-def introducirNum():
-    '''
-    Almacena numero introducido. Si no introduce un numero, da error y vuelve a pedirlo
-
-    Retorna: 
-            - Int: si introduce un int
-            - Float: si introduce un float
-    '''
-    num = input("")
-
-    while type(num) != int and type(num) != float:
-        if num.isdigit():
-            return int(num)
-        elif num.replace(".","",1).isdigit():
-            return float(num)
-        else:
-            print("ERROR - Solo se pueden introducir numeros")
-            num = input("")
-        
-
+from ej2_04 import introducirNum
 
   
 

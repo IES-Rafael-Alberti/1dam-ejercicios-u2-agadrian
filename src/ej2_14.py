@@ -4,27 +4,30 @@ Ejercicio 2.2.4
 Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla la cuenta atrás desde ese número hasta cero separados por comas.
 '''
 
-from ej2_04 import pedirNumEntero
+from ej2_04 import introducirNum
 
 
+def cuentaAtras(numero):
+    '''
+    Almacena en una lista la cuenta atras desde el parametro introducido hasta 0
 
+    Retorna:
+            Str de los valores de la lista separados por comas
+    '''
 
+    lista = []
+    
+    for i in range (numero, -1, -1):
+        lista.append(str(i))
+    return lista
+        
 
 
 def main():
-    numero = pedirNumEntero()
-    while numero < 0:
-        print("Debe ser un entero positivo: ")
-        numero = int(input())
-    
-    for i in range (numero, -1, -1):
-        if i == 0:
-            print(i)
-        else:
-            print(i, end=",")
+    print("Introduce numero: ")
+    numero = introducirNum()
 
-
-
+    print(", ".join(cuentaAtras(numero)))
 
 
 if __name__ == "__main__":

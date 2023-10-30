@@ -4,16 +4,7 @@ Ejercicio 2.1.4
 Escribir un programa que pida al usuario un número entero y muestre por pantalla si es par o impar.
 '''
 
-def pedirNumEntero():
-    '''
-    Pide por consola un numero entero
-
-    Retorna: int
-    '''
-    numero = int(input("Introduce un numero entero: \n"))
-
-    return numero
-
+from ej2_03 import introducirNum
 
 
 def comprobarPar(num):
@@ -29,7 +20,9 @@ def comprobarPar(num):
 
 
 def main():
-    if comprobarPar(pedirNumEntero()):
+    print("Introduce un numero: ")
+    num = introducirNum()
+    if comprobarPar(num):
         print("El numero es par")
     else:
         print("El numero es impar")

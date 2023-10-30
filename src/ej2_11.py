@@ -4,26 +4,27 @@ Ejercicio 2.2.1
 Escribir un programa que pida al usuario una palabra y la muestre por pantalla 10 veces.
 '''
 
-def pedirPalabra():
+def repetirPalabra(palabra):
     '''
-    Pide una palabra por consola y la almacena
+    Almacena en una variable la palabra que recibe por paramtero 10 veces separada por espacio
 
-    Retorna:
-            str 
+    Retorna: str cadena de caracteres 
     '''
-    word = input("Introduce una palabra: \n")
+    resultado = ''
+    cont = 0
 
-    return word
+    while cont < 2:
+        resultado += palabra + "\n" 
+        cont +=1
+    return resultado
 
-
+    
 
 def main():
-    cont = 0
-    palabra = pedirPalabra()
     
-    while cont < 10:
-        print(str(cont+1) + " - " + palabra)
-        cont +=1
+    palabra = input("Introduce una palabra: \n")
+
+    print(repetirPalabra(palabra))
     
 
 

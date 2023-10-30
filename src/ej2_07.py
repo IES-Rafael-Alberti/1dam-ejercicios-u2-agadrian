@@ -12,7 +12,7 @@ Más de 60000€	45%
 Escribir un programa que pregunte al usuario su renta anual y muestre por pantalla el tipo impositivo que le corresponde.
 '''
 
-
+from ej2_03 import introducirNum
 
 def tipoImpositivo(rentaAnual):
     '''
@@ -36,7 +36,8 @@ def tipoImpositivo(rentaAnual):
 
 
 def main():
-    renta = float(input("Introduce tu renta anual: \n"))
+    print("Introduce tu renta anual: ")
+    renta = introducirNum()
     if renta < 0:
         print("ERROR - La renta debe ser un valor positivo.")
     else:

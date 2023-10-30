@@ -11,14 +11,14 @@ Meritorio	    0.6 o más
 Escribir un programa que lea la puntuación del usuario e indique su nivel de rendimiento, así como la cantidad de dinero que recibirá el usuario.
 '''
 
-
+from ej2_03 import introducirNum
 
 def nivelRendimiento(puntuacion):
     '''
     Recibe un parametro puntuacion de tipo float. Lo usa para calcular el nivel de rendimiento del empleado
 
     Retorna:
-            str de el valor del nivel de rendimiento o de error del valor del dato introducido
+            str: de el valor del nivel de rendimiento o de error del valor del dato introducido
     
     '''
     if puntuacion == 0.0:
@@ -32,9 +32,12 @@ def nivelRendimiento(puntuacion):
 
 
 def main():
-    puntuacion = float(input("Puntuación del usuario: \n"))
+    print("Puntuación del usuario:")
+    puntuacion = introducirNum()
+
     rendimiento = nivelRendimiento(puntuacion)
     dinero = puntuacion * 2400
+
     if rendimiento == "Error":
         print("ERROR - El valor debe ser uno de los establecidos previamente (0.0 , 0.4 , 0.6 o más )")
     else:
