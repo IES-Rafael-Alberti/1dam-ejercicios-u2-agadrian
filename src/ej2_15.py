@@ -14,7 +14,17 @@ Escribir un programa que pregunte al usuario una cantidad a invertir, el interé
 from ej2_04 import introducirNum
 
   
+def capitalInversion(inversion,interes,años):
+    ''''
+    Calcula con una formula el capital obtenido en una inversion usando los parametros, y o almacena en una variable
 
+    Retorna:  
+            Str: cadena de caracteres de el mensaje a mostrar
+    '''
+    inversion *=  1 + (interes / 100)
+    msg = "Tu capital final obtenido sera de " + str(inversion * años) + " €. Equivale a " + str(inversion) + " € anuales."
+    
+    return msg
 
 def main():
     print("Introduce cantidad a invertir: ")
@@ -26,9 +36,7 @@ def main():
     print("Introduce numero de años: ")
     años = introducirNum()
 
-    capital = inversion * años + (interes / 100)
-
-    print(f"Tu capital final obtenido sera de {capital} €. Equivale a {capital / años}€ anuales.")
+    print(capitalInversion(inversion,interes,años))
 
 if __name__ == "__main__":
     main()
