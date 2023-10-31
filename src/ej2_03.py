@@ -6,7 +6,7 @@ Escribir un programa que pida al usuario dos números y muestre por pantalla su 
 
 def introducirNum():
     '''
-    Almacena numero introducido. Si no introduce un numero, da error y vuelve a pedirlo
+    Almacena numero introducido. Si no introduce un numero o es negativo, da error y vuelve a pedirlo
 
     Retorna: 
             - Int: si introduce un int
@@ -20,7 +20,7 @@ def introducirNum():
         elif num.replace(".","",1).isdigit():
             return float(num)
         else:
-            print("ERROR - Solo se pueden introducir numeros")
+            print("ERROR - Solo se pueden introducir numeros positivos")
             num = input("")
 
 
