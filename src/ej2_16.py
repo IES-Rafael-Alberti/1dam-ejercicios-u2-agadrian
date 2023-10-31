@@ -16,7 +16,7 @@ from ej2_04 import introducirNum
 
 def crearTriangulo(altura):
     '''
-    Crea un trinagulo usano * de la altura introducida en el parametro, y lo almacena en variable
+    Crea un triangulo usano * de la altura introducida en el parametro, y lo almacena en variable
 
     Retorna:
             Str: cadena de caracteres de la variable 
