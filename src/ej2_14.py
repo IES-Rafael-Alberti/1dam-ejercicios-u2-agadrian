@@ -4,7 +4,7 @@ Ejercicio 2.2.4
 Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla la cuenta atrás desde ese número hasta cero separados por comas.
 '''
 
-from ej2_04 import introducirNum
+from ej2_04 import introducirIntPositivo
 
 
 def cuentaAtras(numero):
@@ -25,7 +25,7 @@ def cuentaAtras(numero):
 
 def main():
     print("Introduce numero: ")
-    numero = introducirNum()
+    numero = introducirIntPositivo()
 
     print(", ".join(cuentaAtras(numero)))
 

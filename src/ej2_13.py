@@ -3,7 +3,7 @@ Ejercicio 2.2.3
 
 Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla todos los números impares desde 1 hasta ese número separados por comas.
 '''
-from ej2_04 import introducirNum
+from ej2_04 import introducirIntPositivo
 
 
 def numerosImpares(num):
@@ -22,7 +22,10 @@ def numerosImpares(num):
 
 def main():
     print("Introudce numero: ")
-    num = introducirNum()
+    num = introducirIntPositivo()
+    while num < 0:
+        print("Debe ser un entero positivo: ")
+        num = introducirIntPositivo()
 
     print(", ".join(numerosImpares(num)))
 

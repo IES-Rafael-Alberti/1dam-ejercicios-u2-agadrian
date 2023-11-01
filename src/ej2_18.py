@@ -11,7 +11,7 @@ Escribir un programa que pida al usuario un número entero y muestre por pantall
 9 7 5 3 1
 '''
 
-from ej2_04 import introducirNum
+from ej2_03 import introducirNum
 
 def trianguloRectangulo(num):
     '''

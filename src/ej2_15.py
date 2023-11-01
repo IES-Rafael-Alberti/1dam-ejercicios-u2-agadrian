@@ -11,7 +11,7 @@ Escribir un programa que pregunte al usuario una cantidad a invertir, el interé
 '''
 
 
-from ej2_04 import introducirNum
+from ej2_03 import introducirNum
 
   
 def capitalInversion(inversion,interes,años):

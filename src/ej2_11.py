@@ -13,7 +13,7 @@ def repetirPalabra(palabra):
     resultado = ''
     cont = 0
 
-    while cont < 2:
+    while cont < 10:
         resultado += palabra + "\n" 
         cont +=1
     return resultado

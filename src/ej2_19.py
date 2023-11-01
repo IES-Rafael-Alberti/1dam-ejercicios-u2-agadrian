@@ -21,7 +21,7 @@ def comprobarContraseña(password, password2):
 
 def main():
     password =  "KHVGhgjbby68ygb"
-    password2 = input("introduce contraseña: ")
+    password2 = input("Introduce contraseña: ")
 
     while comprobarContraseña(password, password2) == False:
         password2 = input("Contraseña incorrecta, introduce contraseña: ")

@@ -11,7 +11,7 @@ Escribir un programa que pida al usuario un número entero y muestre por pantall
 
 '''
 
-from ej2_04 import introducirNum
+from ej2_04 import introducirIntPositivo
 
 
 def crearTriangulo(altura):
@@ -30,7 +30,7 @@ def crearTriangulo(altura):
 
 def main():
     print("Introduce la altura de el triangulo: ")
-    altura = introducirNum()
+    altura = introducirIntPositivo()
     print(crearTriangulo(altura))
 
 if __name__ == "__main__":
