@@ -18,9 +18,50 @@ Si elige la opción 3, se interrumpirá la impresión del menú y el programa fi
 '''
 
 
+def opcMenu():
+    opc = input("\nMENÚ \n---- \n1 - Introduzca una nota \n2 - Imprimir listado \n3 - Finalizar programa \nSeleccione una opcion => \n\n")
+
+    while not opc.isdigit() or int(opc) not in [1,2,3]:
+        print("\nERROR - Debe elegir una de las opciones del menu: ")
+        opc = input("\nMENÚ \n---- \n1 - Introduzca una nota \n2 - Imprimir listado \n3 - Finalizar programa \nSeleccione una opcion => \n\n")
+
+    return int(opc)
+
+
+
+def introducirNota(notas):
+    nota = input("Introduce tu nota: \n")
+    notas.append(nota)
+
+    print(f"\nSe ha introducido la nota {nota}.")
+
+    
+
+
+
+def listaNotas(notas):
+    if not notas:
+        print("\nNo hay ninguna nota añadida a la lista.")
+    else:
+        print("\nLista de notas: ")
+        for i in notas:
+            print(f"- {i}")
+
+    
+
 def main():
-    pass
+    notas = []
+    
+    while True:
+        opc = opcMenu()
+        if opc == 1:
+            introducirNota(notas)
+        elif opc == 2:
+            listaNotas(notas)
+        else:
+            break
 
 
+   
 if __name__ == "__main__":
     main()
