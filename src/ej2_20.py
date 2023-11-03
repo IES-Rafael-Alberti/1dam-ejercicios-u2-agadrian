@@ -7,6 +7,13 @@ Escribir un programa que pida al usuario un número entero y muestre por pantall
 from ej2_04 import introducirIntPositivo
 
 def comprobarPrimo(numero):
+    '''
+    Comprueba si el numero pasado por paramtero es primo o no
+
+    Retorna:
+        True si lo es
+        False si no
+    '''
     
     if numero <= 1:
         return False
@@ -22,7 +29,6 @@ def comprobarPrimo(numero):
         return True
 
 
-
 def main():
     print("Introduce numero a comprobar si es primo: ")
     numero = introducirIntPositivo()
@@ -31,6 +37,7 @@ def main():
         print("Es primo")
     else:
         print("No es primo")
+
 
 if __name__ == "__main__":
     main()

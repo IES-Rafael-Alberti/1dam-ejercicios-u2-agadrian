@@ -19,6 +19,12 @@ Si elige la opción 3, se interrumpirá la impresión del menú y el programa fi
 
 
 def opcMenu():
+    '''
+    Muestra el menu y pide por consola un numero de la opcion elegida
+
+    Retorna: 
+            int, de la opcion
+    '''
     opc = input("\nMENÚ \n---- \n1 - Introduzca una nota \n2 - Imprimir listado \n3 - Finalizar programa \nSeleccione una opcion => \n\n")
 
     while not opc.isdigit() or int(opc) not in [1,2,3]:
@@ -30,6 +36,11 @@ def opcMenu():
 
 
 def introducirNota(notas):
+    '''
+    Pide y almacena en una lista las notas introducidas
+
+    No retorna nada
+    '''
     nota = input("Introduce tu nota: \n")
     notas.append(nota)
 
@@ -40,6 +51,12 @@ def introducirNota(notas):
 
 
 def listaNotas(notas):
+    '''
+    Usando el parametro notas, imprime si hay las notas de la lista
+
+    No retorna nada
+
+    '''
     if not notas:
         print("\nNo hay ninguna nota añadida a la lista.")
     else:

@@ -8,18 +8,26 @@ from ej2_06 import pedirTexto
 
 
 def buscarLetra(frase,letra):
+    '''
+    Se le pasa una frase y una letra como parametro. Busca si la letra está en la frase
+
+    Retorna:
+            str, del mensaje que informa si esta o no
+    '''
     indice = 0
     pos = ""
     frase = frase.replace(" ", "")
 
     for i in frase:
         if i == letra:
-            pos += "\nHay coincidencia en la posicion " + str(indice)
+            pos += "Hay coincidencia en la posicion: " + str(indice) + " --> " + str(i) + "\nFinalizando..."
+            
             break
         else:
-            print("No hay coincidencia en la posicion: " + str(indice))
+            pos +="No hay coincidencia en la posicion: " + str(indice) + " --> " + str(i) + "\n"
+            
         indice += 1
-    print(pos)
+    
     return pos
 
 
@@ -33,7 +41,7 @@ def main():
     print("Introduce letra: ")
     letra = pedirTexto()
 
-    buscarLetra(frase,letra)
+    print(buscarLetra(frase,letra))
 
 
 
