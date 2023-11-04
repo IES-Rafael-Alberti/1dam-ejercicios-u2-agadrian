@@ -26,6 +26,7 @@ def capitalInversion(inversion,interes,años):
     
     return msg
 
+
 def main():
     print("Introduce cantidad a invertir: ")
     inversion = introducirNum()
@@ -37,6 +38,8 @@ def main():
     años = introducirNum()
 
     print(capitalInversion(inversion,interes,años))
+
+
 
 if __name__ == "__main__":
     main()

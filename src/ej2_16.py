@@ -28,10 +28,12 @@ def crearTriangulo(altura):
         cont += 1
     return arbol
 
+
 def main():
     print("Introduce la altura de el triangulo: ")
     altura = introducirIntPositivo()
     print(crearTriangulo(altura))
+
 
 if __name__ == "__main__":
     main()

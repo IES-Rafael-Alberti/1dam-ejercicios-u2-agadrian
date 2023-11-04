@@ -20,10 +20,44 @@ Fin. Se leyeron 2 líneas completas.
 
 from ej2_06 import pedirTexto
 
+def digitosEnLinea(titulos):
+    '''
+    Comprueba y almacena la cantidad de digito que hay en el paramtro
+
+    Retorna:
+            int del contador de cantidad de digitos
+    '''
+    cantDigitos = 0
+
+    for i in titulos:
+        if i.isdigit():
+            cantDigitos += 1
+
+    return cantDigitos
 
 
 def main():
-    pass
+    lineas = 0
+    titulos = ''
+    while True:
+        print("Introduce titulo libro (* para salir): ")
+        tituloLibros = pedirTexto()
+
+        if tituloLibros == "*":
+            break
+
+        titulos = titulos + tituloLibros
+
+        if tituloLibros == "/":
+            lineas += 1
+            digitos = digitosEnLinea(titulos)
+            print(f"Linea completa, aparecen {digitos} digitos numericos")
+            titulos = ''
+        
+    if lineas != 0:
+        print(f"Lineas: {lineas}")
+        
+
 
 if __name__ == "__main__":
     main()

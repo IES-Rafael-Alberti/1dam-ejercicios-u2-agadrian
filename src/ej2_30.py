@@ -31,9 +31,6 @@ def buscarLetra(frase,letra):
     return pos
 
 
-
-
-
 def main():
     print("Introduce frase: ")
     frase = pedirTexto()

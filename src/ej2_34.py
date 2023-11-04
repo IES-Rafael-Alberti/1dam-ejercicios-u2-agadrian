@@ -9,7 +9,7 @@ from ej2_20 import comprobarPrimo
 def main():
     cont_primos = 0
     while True:
-        print("Introducir numero mayor a 1: ")
+        print("Introducir numero mayor a 1 (0 para terminar): ")
         num = introducirNum()
 
         if num == 0:
@@ -17,7 +17,7 @@ def main():
         
         if comprobarPrimo(num) == True:
             cont_primos += 1
-
+    
     print(f"Numeros primos ingresados: {cont_primos}")
 
 

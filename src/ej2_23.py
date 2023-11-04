@@ -16,7 +16,6 @@ def ecoInput():
     
 
 
-
 def main():
     
     ecoInput()
