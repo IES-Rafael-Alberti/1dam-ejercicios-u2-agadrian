@@ -3,7 +3,8 @@ Ejercicio 2.1.5
 
 Para tributar un determinado impuesto se debe ser mayor de 16 años y tener unos ingresos iguales o superiores a 1000 € mensuales. Escribir un programa que pregunte al usuario su edad y sus ingresos mensuales y muestre por pantalla si el usuario tiene que tributar o no.
 '''
-from ej2_03 import introducirNum
+# importo usando src. porque si no en el test no me detecta el modulo ej2_03
+from src.ej2_03 import introducirNum
 
 def comprobarTributacion(edad,ingresos):
     '''

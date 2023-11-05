@@ -12,7 +12,7 @@ Más de 60000€	45%
 Escribir un programa que pregunte al usuario su renta anual y muestre por pantalla el tipo impositivo que le corresponde.
 '''
 
-from ej2_03 import introducirNum
+from src.ej2_03 import introducirNum
 
 def tipoImpositivo(rentaAnual):
     '''
