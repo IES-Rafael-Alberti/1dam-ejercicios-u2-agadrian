@@ -11,7 +11,7 @@ Meritorio	    0.6 o más
 Escribir un programa que lea la puntuación del usuario e indique su nivel de rendimiento, así como la cantidad de dinero que recibirá el usuario.
 '''
 
-from ej2_03 import introducirNum
+from src.ej2_03 import introducirNum
 
 def nivelRendimiento(puntuacion):
     '''
