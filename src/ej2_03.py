@@ -28,15 +28,18 @@ def dividirNumeros(num1 , num2):
     '''
     Divide los dos numeros que se le pasa por parametro. Si el num2 = 0, da error
 
-    Retorna: float si num2 != 0.   Str si num2 = 0
+    Retorna: float del resultado
     '''
+    resultado = 0
 
     if num2 == 0:
-        resultado = "Error - El divisor no puede ser 0."
-    else:
-        resultado = "La division de " + str(num1) + " y " + str(num2) + " es: " + str((num1 / num2))
+        print("Error - El divisor no puede ser 0.")
+        return None
 
-    return resultado
+    else:
+        resultado = num1/num2
+
+    return float(resultado)
 
 
 def main():
@@ -46,7 +49,9 @@ def main():
     print("Introduce otro numero")
     num2 = introducirNum()
     
-    print(dividirNumeros(num1, num2))
+    resultado = dividirNumeros(num1, num2)
+    if num2 != 0:
+        print(f"El resultado de {num1} / {num2} = {resultado}")
    
 
 if __name__ == "__main__":

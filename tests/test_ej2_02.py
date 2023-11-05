@@ -1,12 +1,15 @@
 import pytest
-from src.ej2_02 import pedirContraseña
+from src.ej2_02 import comprobarContraseña
 
 @pytest.mark.parametrize(
-    "expected",
+    "input_n,input_n2,expected",
     [
-        ("123")
+        ("p4ssw0rd","p4ssw0rd",True),
+        ("pedroklk","PEDROKLK",True),
+        ("pedroklk","wermok",False),
+        ("123","4546754",False)
         
     ]
 )
-def test_pedir_contraseña(expected):
-    assert pedirContraseña() == expected
+def test_comprobarContraseña(input_n, input_n2, expected):
+    assert comprobarContraseña(input_n, input_n2) == expected
